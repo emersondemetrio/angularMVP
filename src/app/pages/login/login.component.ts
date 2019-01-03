@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/types';
+import { User, AGSServerResponse } from 'src/types';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 			.login(this.user)
 			.subscribe(
 				() => this.router.navigate(['/mock']),
-				error => console.error('Error', error)
+				(error: AGSServerResponse) => console.error('Error', error)
 			)
 	}
 }
