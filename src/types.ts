@@ -7,3 +7,8 @@ export interface Person {
 export interface Boss extends Person {
 	bonus: number;
 }
+
+export interface User {
+	username?: string;
+	password?: string;
+}

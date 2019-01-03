@@ -1,4 +1,12 @@
-<div fxLayout="row" fxLayoutAlign="space-around center">
-	<div>Login</div>
-	<div>Works</div>
+<div fxLayout="column" fxLayoutAlign="space-around stretch">
+	<div class="container" fxLayout="column" fxLayoutAlign="space-around stretch">
+		<h2>Login</h2>
+		<mat-form-field>
+			<input placeholder="Login" matInput [(ngModel)]="user.username" name="username" type="text" required>
+		</mat-form-field>
+		<mat-form-field>
+			<input placeholder="Password" matInput [(ngModel)]="user.password" name="password" type="password" required>
+		</mat-form-field>
+		<button mat-raised-button color="primary" (click)="login()">Submit</button>
+	</div>
 </div>
