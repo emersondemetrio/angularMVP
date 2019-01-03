@@ -9,7 +9,6 @@ export class LoggedInGuard implements CanActivate {
 	canActivate(
 		next: ActivatedRouteSnapshot,
 		state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-		// return new Date().getTime() % 2 === 0;
 		return true;
 	}
 }
