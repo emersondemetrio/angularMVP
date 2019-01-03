@@ -1,12 +1,24 @@
 <div fxLayout="column" fxLayoutAlign="space-around stretch">
-	<div class="container" fxLayout="column" fxLayoutAlign="space-around stretch">
+	<form #loginForm="ngForm" class="container" fxLayout="column" fxLayoutAlign="space-around stretch" (ngSubmit)="login()">
 		<h2>Login</h2>
+
 		<mat-form-field>
-			<input placeholder="Login" matInput [(ngModel)]="user.username" name="username" type="text" required>
+			<input required placeholder="Login" matInput [(ngModel)]="user.username" name="username" type="text" #username="ngModel">
 		</mat-form-field>
+
+		<small class="error" [hidden]="username.valid || (username.pristine && !loginForm.submitted)">
+			This field is required
+		</small>
+
 		<mat-form-field>
-			<input placeholder="Password" matInput [(ngModel)]="user.password" name="password" type="password" required>
+			<input placeholder="Password" matInput [(ngModel)]="user.password" name="password" type="password" required
+			 #password="ngModel">
 		</mat-form-field>
-		<button mat-raised-button color="primary" (click)="login()">Submit</button>
-	</div>
+
+		<small class="error" [hidden]="password.valid || (password.pristine && !loginForm.submitted)">
+			This field is required
+		</small>
+
+		<button [disabled]="!loginForm.valid" mat-raised-button color="primary" type="submit">Submit</button>
+	</form>
 </div>
