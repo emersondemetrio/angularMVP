@@ -5,8 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginModule } from './pages/login/login.module';
+import { MockModule } from './pages/mock/mock.module';
+import { MockService } from './services/mock.service';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
 	declarations: [
@@ -17,9 +20,13 @@ import { LoginModule } from './pages/login/login.module';
 		FlexLayoutModule,
 		AppRoutingModule,
 		BrowserAnimationsModule,
-		LoginModule
+		LoginModule,
+		MockModule,
+		ComponentsModule
 	],
-	providers: [],
+	providers: [
+		MockService
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
