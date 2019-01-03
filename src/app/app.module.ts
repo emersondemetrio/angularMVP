@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { LoginModule } from './pages/login/login.module';
 
 @NgModule({
 	declarations: [
@@ -15,7 +16,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 		BrowserModule,
 		FlexLayoutModule,
 		AppRoutingModule,
-		BrowserAnimationsModule
+		BrowserAnimationsModule,
+		LoginModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
