@@ -1,8 +1,10 @@
 <div>
 	<div *ngIf="people">
-		<h2>listing people</h2>
-		<app-people-list [people]="people"></app-people-list>
+		<h2>Listing people</h2>
+		<app-people-list [people]="people">
+		</app-people-list>
 	</div>
+
 	<div *ngIf="!people">
 		<h2>no people at this time</h2>
 	</div>
