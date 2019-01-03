@@ -9,7 +9,11 @@ export class LoginComponent implements OnInit {
 
 	constructor() { }
 
+	items = [
+		{ name: 'Gustavo' },
+		{ name: 'Emerson' }
+	]
+
 	ngOnInit() {
 	}
-
 }
