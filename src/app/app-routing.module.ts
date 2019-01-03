@@ -17,6 +17,9 @@ const routes: Routes = [{
 	path: 'mock',
 	component: MockComponent,
 	canActivate: [LoggedInGuard]
+}, {
+	path: '**',
+	redirectTo: '/login',
 }];
 
 @NgModule({

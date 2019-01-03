@@ -12,3 +12,8 @@ export interface User {
 	username?: string;
 	password?: string;
 }
+
+export interface AGSServerResponse {
+	success: boolean;
+	message?: string;
+}
