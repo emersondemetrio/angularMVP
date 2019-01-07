@@ -14,6 +14,8 @@ export class LoggedInGuard implements CanActivate {
 	): Observable<boolean> | Promise<boolean> | boolean {
 
 		const allowed = localStorage.getItem('ags-session') !== null;
+
+		console.log('allowed', allowed)
 		if (!allowed) {
 			this.router.navigate(['/login']);
 			return false;
