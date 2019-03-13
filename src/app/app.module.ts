@@ -11,6 +11,21 @@ import { MockModule } from './pages/mock/mock.module';
 import { MockService } from './services/mock.service';
 import { ComponentsModule } from './components/components.module';
 
+import {
+	MatToolbarModule,
+	MatIconModule,
+	MatButtonModule,
+	MatMenuModule,
+	MatCardModule,
+	MatSidenavModule,
+	MatFormFieldModule,
+	MatInputModule,
+	MatSelectModule,
+	MatChipsModule,
+	MatSnackBarModule,
+	MatTabsModule,
+} from '@angular/material';
+
 @NgModule({
 	declarations: [
 		AppComponent
@@ -22,7 +37,19 @@ import { ComponentsModule } from './components/components.module';
 		BrowserAnimationsModule,
 		LoginModule,
 		MockModule,
-		ComponentsModule
+		ComponentsModule,
+		MatToolbarModule,
+		MatIconModule,
+		MatButtonModule,
+		MatMenuModule,
+		MatCardModule,
+		MatSidenavModule,
+		MatFormFieldModule,
+		MatInputModule,
+		MatSelectModule,
+		MatChipsModule,
+		MatSnackBarModule,
+		MatTabsModule,
 	],
 	providers: [
 		MockService

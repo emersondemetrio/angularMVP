@@ -18,4 +18,8 @@ export class LoginService {
 
 		return of({ success: false, message: 'Fill all required data' });
 	}
+
+	public hasSession(): boolean {
+		return localStorage.getItem('ags-session') !== null;
+	}
 }
