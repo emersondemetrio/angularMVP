@@ -14,9 +14,10 @@ export class LoggedOutGuard implements CanActivate {
 		state: RouterStateSnapshot
 	): Observable<boolean> | Promise<boolean> | boolean {
 
-		const isLoggedOut = !localStorage.getItem('ags-session');
-		if (!isLoggedOut) {
-			this.router.navigate(['/']);
+		const hasSession = localStorage.getItem('ags-session') !== null;
+
+		if (hasSession) {
+			this.router.navigate(['/mock']);
 			return false;
 		}
 
