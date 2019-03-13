@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 	providedIn: 'root'
 })
 export class LoggedInGuard implements CanActivate {
+
 	constructor(private router: Router) { }
 
 	canActivate(
@@ -13,10 +14,9 @@ export class LoggedInGuard implements CanActivate {
 		state: RouterStateSnapshot
 	): Observable<boolean> | Promise<boolean> | boolean {
 
-		const allowed = localStorage.getItem('ags-session') !== null;
+		const hasSession = localStorage.getItem('ags-session') !== null;
 
-		console.log('allowed', allowed)
-		if (!allowed) {
+		if (!hasSession) {
 			this.router.navigate(['/login']);
 			return false;
 		}
