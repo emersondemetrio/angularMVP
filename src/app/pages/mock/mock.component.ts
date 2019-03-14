@@ -4,8 +4,8 @@ import { MockService } from 'src/app/services/mock.service';
 
 @Component({
 	selector: 'app-mock',
-	templateUrl: './mock.component.html',
-	styleUrls: ['./mock.component.scss']
+	templateUrl: '../../../static/pages/mock/mock.component.html',
+	styleUrls: ['../../../static/pages/mock/mock.component.scss']
 })
 export class MockComponent implements OnInit {
 
